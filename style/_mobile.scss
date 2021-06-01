@@ -1,0 +1,19 @@
+
+@media only screen and ( max-width : 1000px ) {
+
+    .main-page {
+        grid-template-columns: 1fr;
+        
+        .left-side {
+
+            &::before {
+                display: none;
+            }
+        }
+        height: unset;
+    }
+
+    .full-view {
+        position: relative;
+    }
+}

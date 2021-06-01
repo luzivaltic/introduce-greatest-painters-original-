@@ -1,0 +1,70 @@
+.greeting-page {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    color: white;
+    overflow: hidden;
+    z-index: 100000000000;
+
+    .heading {
+        position: relative;
+        top: 15vh;
+        left: 15vw;
+        .bigger {
+            position: relative;
+            font-size: 13vw;
+            font-weight: 900;
+            font-family: sans-serif;
+            text-transform: uppercase;
+            color: $primary;
+            .the {
+                position: relative;
+                
+                // background-color: blue;
+
+                .word2 {
+                    position: absolute;
+                    top: 0px;
+                    // transform: translate(-5px , 5px);
+                    color: #f1c40ed5;
+                }
+
+                .word3 {
+                    position: absolute;
+                    top: 0px;
+                    // transform: translate(-10px , 10px);
+                    color: #f1c40e5d;
+                }
+            }
+
+            .greatest {
+                position: relative;
+                
+                // background-color: blue;
+
+                .word2 {
+                    position: absolute;
+                    top: 0px;
+                    // transform: translate(-5px , 5px);
+                    color: #f1c40ed5;
+                }
+
+                .word3 {
+                    position: absolute;
+                    top: 0px;
+                    // transform: translate(-10px , 10px);
+                    color: #f1c40e5d;
+                }
+            }
+
+        }
+
+        .others {
+            position: absolute;
+            display: inline;
+            font-size: 7vw;
+            top: 0px;
+            left: 30vw;
+        }
+    }
+}

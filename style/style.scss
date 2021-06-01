@@ -1,0 +1,220 @@
+
+@import './nav-bar';
+@import './mixin';
+@import './greeting-page';
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+$dark-background : #161722;
+$nav-dark : #25273C;
+$primary : #f1c40f;
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.nav-container {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    z-index: -100000;
+}
+
+body {
+    background-color: $dark-background;
+}
+
+.full-view {
+    position: absolute;
+    top: 0px;
+    z-index: 10;
+}
+
+.main-page {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 200vh;
+    background-color: $dark-background;
+    overflow: hidden;
+
+    .left-side {
+        position: relative;
+        color: white;
+
+        .heading {
+            position: relative;
+            text-align: center;
+            font-size: 30px;
+            text-transform: uppercase;
+            font-weight: 900;
+            .who {
+                position: relative;
+                display: inline-block;
+                color: $primary;
+                font-size: 55px;
+            }
+            
+            margin: 50px 0px;
+        }
+
+        .card-gallery {
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            width: 90%;
+            left: 50%;
+            transform: translateX(-50%);
+            .card {
+                width: 150px;
+                height: 200px;
+                margin: 5px;
+                border-radius: 10px;
+                margin-bottom: 50px;
+                cursor: pointer;           
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    transition: 0.5s;
+                    border-radius: inherit;
+
+                    &:hover {
+                        transform: translateY(-10px);
+                        box-shadow: 5px 20px 20px rgba(0, 0, 0, 0.425);
+                    }
+                }
+            }
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 5px;
+            height: 70%;
+            right: 0%;
+            top: 50%;
+            border-radius: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(255, 255, 255, 0.514);
+        }
+    
+    }
+
+    .right-side {
+
+        position: relative;
+        padding: 30px;
+        // overflow: hidden;
+
+        .view-container {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            height: 100%;
+        }
+
+        .painter-introduce {
+            position: relative;
+            display: grid;
+            grid-template-columns: 0.3fr 0.7fr;
+            height: 35vh;
+
+            .image-container {
+                position: relative;
+                border-radius: 10px;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: inherit;
+                }
+            }
+
+            .infomation {
+                position: relative;
+                margin-left: 30px;
+
+                .heading {
+                    position: relative;
+                    color: rgba(255, 255, 240, 0.397);
+                    margin-bottom: 5px;
+                    
+                }
+
+                .name-container {
+                    margin-bottom: 5px;
+                    
+                    .painter {
+                        color: white;
+                        font-size: 20px;
+                    }
+                }
+
+                .live-period {
+
+                    margin-bottom: 20px;
+
+                    .painter {
+                        color: white;
+                        font-size: 20px;
+                    }
+                }
+
+                .decription {
+                    color: rgba(255, 255, 255, 0.541);
+                    
+                }
+
+            }
+        }
+
+        .unique-work {
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 50px;
+            font-size: 30px;
+            color: $primary;
+            margin-bottom: 50px;
+
+            .heading {
+                letter-spacing: 3px;
+                margin-bottom: 40px;
+            }
+
+            .image-container {
+                position: relative;
+                
+                padding: 30px;
+                margin-bottom: 0px;
+                background-color: $nav-dark;
+                width: 100%;
+
+                img {
+                    position: relative;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 100%;
+                    // max-height: 90vh;
+                    object-fit: cover;                    
+                }
+
+                .name {
+                    position: relative;
+                    text-align: center;
+                    color:  rgba(255, 255, 240, 0.397);
+                    letter-spacing: 3px;
+                    // margin-bottom: px;
+                }
+            }
+            
+        }
+
+    }
+}
+
+@import './mobile';
